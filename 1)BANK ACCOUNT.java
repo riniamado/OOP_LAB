@@ -16,7 +16,7 @@ import java.util.*;
             System.out.println("After debit : " + balance);
         }
         else{
-            System.out.println("Minimum balance must keep.can't withdraw");
+            System.out.println("Minimum balance must be kept");
         }
        
     }
