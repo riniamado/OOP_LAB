@@ -1,36 +1,47 @@
 import java.util.*;
 
 class room {
-    String room_no;
+    int room_no;
     String room_type;
     int room_area;
 
+    public room(){
+		this.room_no = 1;
+		this.room_type = "kitchen";
+		this.room_area = 53753;
+	}
+    public room(int rn,String rt,int ra){
+		this.room_no = rn;
+		this.room_type = rt;
+		this.room_area = ra;
+	}
+   
+
     
-    public void read() {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter room no : ");
-        this.room_no = sc.nextLine();
-        System.out.print("Enter room type : ");
-        this.room_type = sc.nextLine();
-        System.out.print("Enter room area : ");
-        this.room_area = sc.nextInt();
+    
+
+    public void disp() {
+        System.out.println("No : " +this.room_no);
+        System.out.println("Type : "+this.room_type);
+        System.out.println("Area : "+this.room_area);
+        System.out.println("-------------------------------------------");
+        
     }
 
-    public void display() {
-        System.out.println("No : " ,room_no);
-        System.out.println("Type : ",room_type);
-        System.out.println("Area : ",room_area);
-    }
-}    
-claas main()
-{
+
+   
+
+
     public static void main(String[] args) {
         room room_1 = new room();
-        room_1.read();
-        room_1.display();
+        
+        room_1.disp();
+        
+        room room_2=new room(2,"Dinning hall",35636);
+        
+        room_2.disp();
 
-        room room_2 = new room();
-        room_2.read();
-        room_2.display();
+        
     }
 }
+
