@@ -18,36 +18,38 @@ class rectangle {
     public void read() {
         Scanner sc = new Scanner(System.in);
 
-        System.out.print("Enter color : ");
+        System.out.println("Enter color : ");
         this.color = sc.nextLine();
-        System.out.print("Enter length : ");
+        System.out.println("Enter length : ");
         this.length = sc.nextDouble();
-        System.out.print("Enter width : ");
+        System.out.println("Enter width : ");
         this.width = sc.nextDouble();
 
         this.area = this.length * this.width;
+        System.out.println("-----------------------------------------");
+        
     }
 
-    public String get_color() {
-        System.out.println("color : " +,color);
-        return color;
+    public String find_color() {
+        System.out.println(" The color is : " +this.color);
+        return this.color;
     }
 
-    public double get_area() {
-        System.out.println("area : ",area);
-        return area;
+    public double find_area() {
+        System.out.println("The area is: "+this.area);
+        return this.area;
     }
 
     public static void main(String[] args) {
-        rectangle rectangle_1 = new rectangle(10, 5, "red");
+        rectangle rectangle_1 = new rectangle();
         rectangle rectangle_2 = new rectangle();
+        rectangle_1.read();
         rectangle_2.read();
-        if ((rectangle_1.get_area() == rectangle_2.get_area()) && (rectangle_1.get_color().equals(rectangle_2.get_color()))) {
-            System.out.println("rectangles are same");
+        if ((rectangle_1.find_area() == rectangle_2.find_area()) && (rectangle_1.find_color().equals(rectangle_2.find_color()))) {
+            System.out.println("MATCHING RECTANGLES");
         } else {
-            System.out.println("rectangles are not same");
+            System.out.println("NON MATCHING RECTANGLES");
         }
 
     }
 }
-
